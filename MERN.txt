@@ -1,0 +1,24 @@
+MERN Stack
+
+1.	While working with a FIGMA Design, the first thing to study is the Font Family being used in the design. If it exists in your PC, well and good, If doesn’t download it from the Google Fonts or use it in the app.
+2.	MAX-Width: No matter how much the size of the screen increases the width would never exceed the MAX- Width value given by you.
+3.	MIN-Width: No matter how much the size of the screen decreases the width would never decrease more than the MIN- Width value given by you.
+4.	ExpressJs And Mongoose
+5.	Data, File or Third Party API
+
+
+--File Structure
+
+Package.Json
+.env
+Src
+|---- Index.js  		    //Entry point for you backend
+|----App  			    //config
+|----Constants		    //enums, DB-Name
+|----DB 			    //code for Database queries
+|----Models             //Schema, Structures of the Database
+|----Controllers        //Methods, Functions
+|----MiddleWares        //
+|----Utils              //Functions to be used in various parts of the code
+|----Routes             //Defining and managinnf routes definition
+
