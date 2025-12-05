@@ -2,10 +2,10 @@ import express from 'express';
 import cors from 'cors';
 
 
+const app = express();
 
 app.use(cors());
 const PORT = process.env.PORT;
-const app = express();
 
 const jokes = [
     {
@@ -26,11 +26,11 @@ app.get('/', (req, res) => {
     res.send('Hello World');
 });
 
-app.get('/jokes', (req, res) => {
+app.get('/api/jokes', (req, res) => {
     res.json(jokes);
 });
 
 
-app.listen(3000, () => {
-    console.log('Server started on port 3000');
+app.listen(5000, () => {
+    console.log('Server started on port 5000');
 });

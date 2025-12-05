@@ -8,7 +8,7 @@ export default function Home() {
 const [jokes,setJokes] = useState([]);
 
 useEffect(() => {
-  axios.get("/jokes")
+  axios.get("http://localhost:5000/api/jokes")
   .then((response) => {
       setJokes(response.data);
     }
@@ -22,6 +22,14 @@ useEffect(() => {
     <div>
       <h1>Home</h1>
       <p>Jokes: {jokes.length}</p>
+
+      {
+      jokes.map((joke ,index) => (
+        <div key={joke.id}>
+          <h3>{joke.title}</h3>
+          <p>{joke.content}</p>
+        </div>
+      ))}
     </div>
   );
 }
