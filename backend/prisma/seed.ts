@@ -9,10 +9,10 @@ const prisma = new PrismaClient({ adapter });
 async function seed() {
     const user = await prisma.user.create({
         data: {
-            username: "faisal04_develop",
-            password:"faisal1234",
-            email: "faisal04@develop.com",
-            role: "doctor",
+            username: "faisal_develop",
+            password:"faisal123",
+            email: "faisal@develop.com",
+            role: "patient",
             createdAt: new Date(),
             updatedAt: new Date(),
         
