@@ -14,7 +14,11 @@ app.get('/users',(req,res)=> {
 })
 
 app.get('/', async (req, res) => {
-  const users = await prisma.user.findFirst();
+  const users = await prisma.user.findUnique({
+    where:{
+      id:2
+    }
+  });
   res.json(users);
 }); 
 
