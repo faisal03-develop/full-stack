@@ -22,6 +22,19 @@ app.get('/', async (req, res) => {
   res.json(users);
 }); 
 
+
+app.put('/users',async (req,res)=>{
+  const updateUser = await prisma.user.update({
+    where:{
+      email:"faisal04@develop.com"
+    },
+    data:{
+      role:"patient"
+    },
+  });
+  res.json(updateUser);
+})
+
 app.listen(5000, () => {
   console.log('Server is running on port 5000');
 });
