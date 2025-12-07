@@ -23,7 +23,7 @@ app.get('/', async (req, res) => {
 }); 
 
 
-app.put('/users',async (req,res)=>{
+app.put('/users/update',async (req,res)=>{
   const updateUser = await prisma.user.update({
     where:{
       email:"faisal04@develop.com"
@@ -33,6 +33,15 @@ app.put('/users',async (req,res)=>{
     },
   });
   res.json(updateUser);
+})
+
+app.delete('/users/delete',async (req, res)=>{
+  const deleteUser = await prisma.user.delete({
+    where:{
+      email:"faisal04@develop.com"
+    },
+  });
+  res.json(deleteUser);
 })
 
 app.listen(5000, () => {
