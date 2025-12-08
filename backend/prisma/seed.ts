@@ -15,7 +15,6 @@ async function seed() {
     email: "admin@hospital.com",
     role: "admin",
     createdAt: new Date(),
-    updatedAt: new Date(),
 },
 {
     username: "dr_sara",
@@ -23,7 +22,6 @@ async function seed() {
     email: "sara.khan@hospital.com",
     role: "doctor",
     createdAt: new Date(),
-    updatedAt: new Date(),
 },
 {
     username: "dr_haider",
@@ -31,7 +29,6 @@ async function seed() {
     email: "haider@hospital.com",
     role: "doctor",
     createdAt: new Date(),
-    updatedAt: new Date(),
 },
 {
     username: "Ahmed",
@@ -39,7 +36,6 @@ async function seed() {
     email: "ahmed.patient@example.com",
     role: "patient",
     createdAt: new Date(),
-    updatedAt: new Date(),
 },
 {
     username: "Maryam",
@@ -47,7 +43,6 @@ async function seed() {
     email: "maryam.patient@example.com",
     role: "patient",
     createdAt: new Date(),
-    updatedAt: new Date(),
 },
 {
     username: "Ali",
@@ -55,7 +50,6 @@ async function seed() {
     email: "reception@hospital.com",
     role: "patiennt",
     createdAt: new Date(),
-    updatedAt: new Date(),
 },
 {
     username: "Junaid",
@@ -63,7 +57,6 @@ async function seed() {
     email: "junaid.lab@hospital.com",
     role: "Patient",
     createdAt: new Date(),
-    updatedAt: new Date(),
 },
 {
     username: "Hina",
@@ -71,7 +64,6 @@ async function seed() {
     email: "hina.nurse@hospital.com",
     role: "Doctor",
     createdAt: new Date(),
-    updatedAt: new Date(),
 },
 {
     username: "Munish",
@@ -79,10 +71,76 @@ async function seed() {
     email: "it.support@hospital.com",
     role: "doctor",
     createdAt: new Date(),
-    updatedAt: new Date(),
 }
 
     ]})
+}
+async function seed2() {
+    const treatment = await prisma.treatment.createMany({
+       data: [
+        {
+            id: "treat_1",
+            userId: "user1", // faisal_develop
+            name: "General Consultation",
+            createdAt: new Date(),
+        },
+        {
+            id: "treat_2",
+            userId: "user2", // admin_master
+            name: "Admin Account - No Treatment",
+            createdAt: new Date(),
+        },
+        {
+            id: "treat_3",
+            userId: "user3", // dr_sara
+            name: "Doctor Appointment Review",
+            createdAt: new Date(),
+        },
+        {
+            id: "treat_4",
+            userId: "user4", // dr_haider
+            name: "Follow-Up Assessment",
+            createdAt: new Date(),
+        },
+        {
+            id: "treat_5",
+            userId: "user5", // patient_ahmed
+            name: "Routine Checkup",
+            createdAt: new Date(),
+        },
+        {
+            id: "treat_6",
+            userId: "user6", // patient_maryam
+            name: "Blood Pressure Monitoring",
+            createdAt: new Date(),
+        },
+        {
+            id: "treat_7",
+            userId: "user7", // reception_01
+            name: "Reception Staff Medical Clearance",
+            createdAt: new Date(),
+        },
+        {
+            id: "treat_8",
+            userId: "user8", // labtech_junaid
+            name: "Lab Technician Health Screening",
+            createdAt: new Date(),
+        },
+        {
+            id: "treat_9",
+            userId: "user9", // nurse_hina
+            name: "Nursing Duty Fitness Test",
+            createdAt: new Date(),
+        },
+        {
+            id: "treat_10",
+            userId: "user10", // support_it
+            name: "IT Support Annual Physical Exam",
+            createdAt: new Date(),
+        }
+    ]
+
+    })
 }
 
 
