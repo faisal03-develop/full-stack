@@ -7,32 +7,28 @@ datasource db {
   provider = "postgresql"
 }
 
-model User {
-  id    String     @id @default(cuid())
-  name String?
+model patient {
+  pid    String     @id @default(cuid())
+  name String
   username   String @unique
   password   String
   email String  @unique
-  role String @default("patient")
   createdAt DateTime @default(now())
-  patients Treatment[]
+  age Int
+  bloodgroup String
+  address String
+  gender String
+  phone Int
 }
 
-model Treatment{
-  id String @id @default(cuid())
-  userId    String
-  user User @relation(fields: [userId], references: [id])
-  name String?
+model doctor {
+  doc_id    String     @id @default(cuid())
+  name String
+  username   String @unique
+  password   String
+  email String  @unique
   createdAt DateTime @default(now())
+  qualifications String
+  experience Int
+
 }
-
-
-// model TreatmentPlan {
-//   id String @id @default(cuid())
-//   name String
-//   description String?
-//   doctor  User @relation(fields: [doctorId], references: [id] onDelete: cascade) 
-//   doctorId String
-
-
-// }

@@ -17,12 +17,15 @@ else{
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+
+
+
 app.get('/',(req,res)=> {
   res.send('Hello World!');
 })
 
 app.get('/users', async (req, res) => {
-  const users = await prisma.user.findUnique({
+  const users = await prisma.patient.findUnique({
     where:{
       username:'faisal04'
     }
@@ -31,20 +34,20 @@ app.get('/users', async (req, res) => {
 }); 
 
 
-app.put('/users/update',async (req,res)=>{
-  const updateUser = await prisma.user.update({
-    where:{
-      email:"faisal04@develop.com"
-    },
-    data:{
-      role:"patient"
-    },
-  });
-  res.json(updateUser);
-})
+// app.put('/users/update',async (req,res)=>{
+//   const updateUser = await prisma.patient.update({
+//     where:{
+//       email:"faisal04@develop.com"
+//     },
+//     data:{
+//       role:"patient"
+//     },
+//   });
+//   res.json(updateUser);
+// })
 
 app.delete('/users/delete',async (req, res)=>{
-  const deleteUser = await prisma.user.delete({
+  const deleteUser = await prisma.patient.delete({
     where:{
       email:"faisal04@develop.com"
     },
@@ -57,7 +60,7 @@ app.delete('/users/delete',async (req, res)=>{
 app.post('/login', async (req, res) => {
   const { email, password } = req.body;
   
-  const user = await prisma.user.findUnique({
+  const user = await prisma.patient.findUnique({
     where: {
       email,
       password,
