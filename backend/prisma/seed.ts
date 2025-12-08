@@ -80,62 +80,56 @@ async function seed2() {
        data: [
         {
             id: "treat_1",
-            userId: "user1", // faisal_develop
+            userId: "cmiwxvp4q0000kkvznp293w5s", // faisal_develop
             name: "General Consultation",
             createdAt: new Date(),
         },
         {
             id: "treat_2",
-            userId: "user2", // admin_master
+            userId: "cmiwxvp4q0001kkvzm8scw28h", // admin_master
             name: "Admin Account - No Treatment",
             createdAt: new Date(),
         },
         {
             id: "treat_3",
-            userId: "user3", // dr_sara
+            userId: "cmiwxvp4q0002kkvz22hp8lo4", // dr_sara
             name: "Doctor Appointment Review",
             createdAt: new Date(),
         },
         {
             id: "treat_4",
-            userId: "user4", // dr_haider
+            userId: "cmiwxvp4q0003kkvzma27mh0v", // dr_haider
             name: "Follow-Up Assessment",
             createdAt: new Date(),
         },
         {
             id: "treat_5",
-            userId: "user5", // patient_ahmed
+            userId: "cmiwxvp4q0004kkvz9ap04k18", // patient_ahmed
             name: "Routine Checkup",
             createdAt: new Date(),
         },
         {
             id: "treat_6",
-            userId: "user6", // patient_maryam
+            userId: "cmiwxvp4q0005kkvzsss4zgyu", // patient_maryam
             name: "Blood Pressure Monitoring",
             createdAt: new Date(),
         },
         {
             id: "treat_7",
-            userId: "user7", // reception_01
+            userId: "cmiwxvp4q0006kkvzz1vcq481", // reception_01
             name: "Reception Staff Medical Clearance",
             createdAt: new Date(),
         },
         {
             id: "treat_8",
-            userId: "user8", // labtech_junaid
+            userId: "cmiwxvp4q0007kkvzcf5sco7i", // labtech_junaid
             name: "Lab Technician Health Screening",
             createdAt: new Date(),
         },
         {
             id: "treat_9",
-            userId: "user9", // nurse_hina
+            userId: "cmiwxvp4q0008kkvzqdqaui7j", // nurse_hina
             name: "Nursing Duty Fitness Test",
-            createdAt: new Date(),
-        },
-        {
-            id: "treat_10",
-            userId: "user10", // support_it
-            name: "IT Support Annual Physical Exam",
             createdAt: new Date(),
         }
     ]
@@ -144,4 +138,4 @@ async function seed2() {
 }
 
 
-seed() .then(() => prisma.$disconnect);
+seed2() .then(() => prisma.$disconnect);
