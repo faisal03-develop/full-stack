@@ -1,6 +1,12 @@
 import Background from "@/components/background";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
+import Doctor from "@/components/doctor";
+
+
+
+
+
 export default function Home() {
 
   return (
@@ -8,6 +14,7 @@ export default function Home() {
       <Background />
       <Header />
       <Hero />
+      <Doctor />
     </div>
   );
 }
