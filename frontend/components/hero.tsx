@@ -2,13 +2,13 @@ import Image from "next/image"
 
 export default function hero() {
   return (
-    <div className=" h-4/5 relative z-2 flex flex-row justify-between items-center">
+    <div className=" h-120 relative z-2 flex flex-row justify-between items-center">
         <div className="w-170">
-            <p className="font-medium">Lorem ipsum dolor sit amet</p>
-            <h1 className="text-4xl">Lorem met consectetur adipisicing</h1>
+            <p className="font-medium text-2xl">Lorem ipsum dolor sit amet</p>
+            <h1 className="text-4xl mb-4 mt-2">Lorem met consectetur adipisicing</h1>
             <p className="font-light text-gray-600">Lorem ipsum dolor sit amet</p>
             <div>
-                <div className="flex flex-row items-center gap-4">
+                <div className="flex flex-row items-center gap-4 my-3">
                     <button className="bg-(--purple) h-10 w-25 rounded-2xl text-white">Button 1</button>
                     <button className="bg-white h-10 w-45 rounded-2xl text-(--purple)">Button 2</button>
                 </div>
