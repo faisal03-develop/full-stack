@@ -8,23 +8,7 @@ const prisma = new PrismaClient({ adapter });
 
 async function seed() {
     const user = await prisma.user.createMany({
-        data:[ {
-            username: "faisal_develop",
-            password:"faisal123",
-            email: "faisal@develop.com",
-            role: "patient",
-            createdAt: new Date(),
-            updatedAt: new Date(),
-        
-        },
-        {
-    username: "faisal_develop",
-    password: "faisal123",
-    email: "faisal@develop.com",
-    role: "patient",
-    createdAt: new Date(),
-    updatedAt: new Date(),
-},
+        data:[ 
 {
     username: "admin_master",
     password: "admin123",
