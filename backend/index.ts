@@ -44,6 +44,15 @@ app.delete('/users/delete',async (req, res)=>{
   res.json(deleteUser);
 })
 
+app.delete('/users/deleteAll', async (req, res)=>{
+  const deleteAll = await prisma.user.deleteMany({
+    where:{
+      role:"patient"
+    }
+  });
+
+})
+
 app.listen(5000, () => {
   console.log('Server is running on port 5000');
 });
