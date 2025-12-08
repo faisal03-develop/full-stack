@@ -8,15 +8,23 @@ const app = express();
 const connectionString = `${process.env.DATABASE_URL}`;
 const adapter = new PrismaPg({ connectionString});
 const prisma = new PrismaClient({adapter});
+if (prisma) {
+  console.log("Database is connected");
+}
+else{
+  console.log("Database is not connected");
+}
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-app.get('/users',(req,res)=> {
+app.get('/',(req,res)=> {
   res.send('Hello World!');
 })
 
-app.get('/', async (req, res) => {
+app.get('/users', async (req, res) => {
   const users = await prisma.user.findUnique({
     where:{
-      id:2
+      username:'faisal04'
     }
   });
   res.json(users);
@@ -44,14 +52,21 @@ app.delete('/users/delete',async (req, res)=>{
   res.json(deleteUser);
 })
 
-app.delete('/users/deleteAll', async (req, res)=>{
-  const deleteAll = await prisma.user.deleteMany({
-    where:{
-      role:"patient"
-    }
-  });
 
-})
+//Login Page:
+app.post('/login', async (req, res) => {
+  const { email, password } = req.body;
+  
+  const user = await prisma.user.findUnique({
+    where: {
+      email,
+      password,
+  }});
+console.log(user);
+
+  res.json("user");
+});
+
 
 app.listen(5000, () => {
   console.log('Server is running on port 5000');
