@@ -2,15 +2,15 @@ import Image from "next/image"
 
 export default function hero() {
   return (
-    <div className=" h-120 relative z-2 flex flex-row justify-between items-center">
+    <div className=" h-130 relative z-2 flex flex-row justify-between items-center">
         <div className="w-170">
-            <p className="font-medium text-2xl">Lorem ipsum dolor sit amet</p>
-            <h1 className="text-4xl mb-4 mt-2">Lorem met consectetur adipisicing</h1>
-            <p className="font-light text-gray-600">Lorem ipsum dolor sit amet</p>
+            <p className="font-medium w-130">Your health deserves timely attention.Connect with trusted doctors whenever you need care.</p>
+            <h1 className="text-4xl font-bold mb-4 mt-2">Your Treatment Journey Begins Here</h1>
+            <p className="font-light w-130 text-gray-600">Create your patient profile, meet qualified doctors, and follow a treatment plan built just for you.</p>
             <div>
-                <div className="flex flex-row items-center gap-4 my-3">
-                    <button className="bg-(--purple) h-10 w-25 rounded-2xl text-white">Button 1</button>
-                    <button className="bg-white h-10 w-45 rounded-2xl text-(--purple)">Button 2</button>
+                <div className="flex flex-row items-center gap-4 my-4">
+                    <button className="bg-(--purple) h-10 w-30 rounded-2xl text-white">Get Started</button>
+                    <button className="bg-white h-10 w-45 rounded-2xl text-(--purple)">Treatment Plans</button>
                 </div>
             </div>
         </div>
