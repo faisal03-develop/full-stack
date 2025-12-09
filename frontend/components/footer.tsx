@@ -18,7 +18,7 @@ export default function footer() {
           </div>
           <div  className="flex flex-row gap-5 my-4" >
           <Image src="/images/email.png" alt="freepik email" height={30} width={30}></Image>
-          <p>MediCare@gmail.com</p>
+          <p>CureBridge@gmail.com</p>
           </div>
         </div>
       </div>
@@ -27,7 +27,7 @@ export default function footer() {
           <span className="text-2xl text-(--purple) font-bold">Address</span>
           <div className="flex flex-row gap-5 my-4" >
           <Image src="/images/location.png" alt="freepik location" height={30} width={30}></Image>
-          <p>MediCare, Karachi, Pakistan</p>
+          <p>CureBridge, Karachi, Pakistan</p>
           </div>
         </div>
       </div>
