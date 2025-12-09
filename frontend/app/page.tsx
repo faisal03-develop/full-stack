@@ -2,8 +2,8 @@ import Background from "@/components/background";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
 import Doctor from "@/components/doctor";
-import Plan from "@/components/plan";
-
+import TreatmentPlan from "@/components/treatmentplan";
+import SuccessStories from "@/components/successstories";
 
 
 
@@ -15,7 +15,10 @@ export default function Home() {
       <Header />
       <Hero />
       <Doctor />
-      <Plan />
+      <TreatmentPlan />
+      <SuccessStories />
+
+      
     </div>
   );
 }

@@ -5,7 +5,7 @@ export default function hero() {
     <div className=" h-130 relative z-2 flex flex-row justify-between items-center text-(--darkblue)">
         <div className="w-170">
             <p className="font-medium w-130">Your health deserves timely attention.Connect with trusted doctors whenever you need care.</p>
-            <h1 className="text-4xl font-bold mb-4 mt-2">Your Treatment Journey Begins Here</h1>
+            <h1 className="text-6xl font-bold mb-4 mt-2">Your Treatment Journey Begins Here</h1>
             <p className="font-light w-130 text-gray-600">Create your patient profile, meet qualified doctors, and follow a treatment plan built just for you.</p>
             <div>
                 <div className="flex flex-row items-center gap-4 my-4">
