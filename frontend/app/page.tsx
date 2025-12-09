@@ -4,21 +4,23 @@ import Hero from "@/components/hero";
 import Doctor from "@/components/doctor";
 import TreatmentPlan from "@/components/treatmentplan";
 import SuccessStories from "@/components/successstories";
-
+import Footer from "@/components/footer";
 
 
 export default function Home() {
 
   return (
-    <div className="mx-30">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="mx-20">
       <Background />
       <Header />
       <Hero />
       <Doctor />
       <TreatmentPlan />
       <SuccessStories />
-
+      <Footer />
       
+    </div>
     </div>
   );
 }
