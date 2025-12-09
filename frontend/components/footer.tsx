@@ -3,6 +3,7 @@ import Image from "next/image"
 
 export default function footer() {
   return (
+    <div>
     <div className="mt-20 bg-(--gray) p-20 flex flex-row justify-between">
       <div className="flex flex-row items-center w-160 gap-7">
         <Image src="/images/logo.png" alt="logo" height={100} width={140}></Image>
@@ -30,6 +31,11 @@ export default function footer() {
           </div>
         </div>
       </div>
+    </div>
+    {/* copy right */}
+    <div>
+      <span className="flex flex-row justify-center text-(--purple)">&copy; 2025 Copyright MediCare. All Rights Reserved.</span>
+    </div>
     </div>
   )
 }
