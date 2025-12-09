@@ -19,6 +19,8 @@ model patient {
   address String
   gender String
   phone Int
+
+  appointment Appointment[]
 }
 
 model doctor {
@@ -26,9 +28,39 @@ model doctor {
   name String
   username   String @unique
   password   String
+  bloodgroup String
+  gender String
+  phone Int
+  age Int
+  address String
   email String  @unique
   createdAt DateTime @default(now())
   qualifications String
   experience Int
+  appointment Appointment[]
+  treatment TreatmentPlan[]
+}
 
+model TreatmentPlan{
+  t_id String @id @default(cuid())
+  name String
+  description String
+  price Int
+  doc doctor @relation(fields: [doc_id], references: [doc_id])
+  doc_id String
+  createdAt DateTime @default(now())
+  appointment Appointment[]
+}
+
+
+model Appointment{
+  a_id String @id @default(cuid())
+  doctor doctor @relation(fields: [doc_id], references: [doc_id])
+  doc_id String
+  patient patient @relation(fields: [pid], references: [pid])
+  pid String
+  tplan TreatmentPlan @relation(fields: [t_id], references: [t_id])
+  t_id String
+  date DateTime
+  status String
 }

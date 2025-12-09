@@ -2,7 +2,7 @@ import Background from "@/components/background";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
 import Doctor from "@/components/doctor";
-
+import Plan from "@/components/plan";
 
 
 
@@ -15,6 +15,7 @@ export default function Home() {
       <Header />
       <Hero />
       <Doctor />
+      <Plan />
     </div>
   );
 }
