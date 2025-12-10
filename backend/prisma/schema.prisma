@@ -6,6 +6,13 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+
+enum UserRole {
+  patient
+  doctor
+  admin
+}
+
  model User{
   id String @id @default(cuid())
   firstname String
@@ -13,8 +20,11 @@ datasource db {
   username String @unique
   email String @unique
   password String
-  role String
+  role      UserRole  @default(patient)
   createdAt DateTime @default(now())
+  treatment TreatmentPlan[]
+  appointment Appointment[]
+
  }
 
 model TreatmentPlan{
@@ -22,7 +32,7 @@ model TreatmentPlan{
   name String
   description String
   price Int
-  doc doctor @relation(fields: [doc_id], references: [doc_id])
+  doc User @relation(fields: [doc_id], references: [id])
   doc_id String
   createdAt DateTime @default(now())
   appointment Appointment[]
@@ -31,11 +41,10 @@ model TreatmentPlan{
 
 model Appointment{
   a_id String @id @default(cuid())
-  doctor doctor @relation(fields: [doc_id], references: [doc_id])
   doc_id String
-  patient patient @relation(fields: [pid], references: [pid])
+  patient User @relation(fields: [pid], references: [id])
   pid String
-  tplan TreatmentPlan @relation(fields: [t_id], references: [t_id])
+  tplan TreatmentPlan @relation(fields: [t_id], references: [id])
   t_id String
   date DateTime
   status String
