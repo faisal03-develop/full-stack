@@ -11,7 +11,7 @@ export default function page() {
         </div>
         <div className="p-15 flex flex-col items-start ml-15 bg-white">
             <h1 className="text-4xl text-(--purple) font-bold">CureBridge</h1>
-            <span className=" mb-15 ml-2 text-(--purple)">Patient Log-In</span>
+            <span className=" mb-15 ml-2 text-(--purple)">Log-In Page</span>
             <form className="" action="">
                 <label className=" text-(--darkblue)" htmlFor="">UserName: </label>
                 <br />

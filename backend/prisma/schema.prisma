@@ -6,43 +6,19 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
-
-model patient {
-  pid    String     @id @default(cuid())
-  name String
-  username   String @unique
-  password   String
-  email String  @unique
+ model User{
+  id String @id @default(cuid())
+  firstname String
+  lastname String
+  username String @unique
+  email String @unique
+  password String
+  role String
   createdAt DateTime @default(now())
-  age Int
-  bloodgroup String
-  address String
-  gender String
-  phone Int
-
-  appointment Appointment[]
-}
-
-model doctor {
-  doc_id    String     @id @default(cuid())
-  name String
-  username   String @unique
-  password   String
-  bloodgroup String
-  gender String
-  phone Int
-  age Int
-  address String
-  email String  @unique
-  createdAt DateTime @default(now())
-  qualifications String
-  experience Int
-  appointment Appointment[]
-  treatment TreatmentPlan[]
-}
+ }
 
 model TreatmentPlan{
-  t_id String @id @default(cuid())
+  id String @id @default(cuid())
   name String
   description String
   price Int
