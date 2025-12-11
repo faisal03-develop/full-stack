@@ -1,4 +1,4 @@
-import SuccessCards from "./common/successcards"
+import SuccessCards from "./common/successCards"
 
 export default function successStories() {
   return (
