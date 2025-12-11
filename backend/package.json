@@ -4,9 +4,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "tsx watch index.ts",
-    "start": "nodemon index.js",
-    "build": " index.ts",
+    "dev": "node api.js && tsx watch index.ts",
+    "start": "node api.js && nodemon index.js",
+    "build": "node api.js && index.ts",
     "generate": "prisma generate"
   },
   "prisma": {
@@ -30,6 +30,7 @@
     "@types/node": "^24.10.1",
     "@types/pg": "^8.15.6",
     "nodemon": "^3.1.11",
+    "prettier": "^3.7.4",
     "prisma": "^7.1.0",
     "ts-node": "^10.9.2",
     "tsx": "^4.21.0",
