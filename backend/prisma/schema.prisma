@@ -22,7 +22,7 @@ enum UserRole {
   password String
   role      UserRole  @default(patient)
   createdAt DateTime @default(now())
-  treatment TreatmentPlan[]
+ //This defines that the user can have many treatment plans (The User can have One to Many Relationship with the TreatmentPlan)
   appointment Appointment[]
 
  }
@@ -32,10 +32,9 @@ model TreatmentPlan{
   name String
   description String
   price Int
-  doc User @relation(fields: [doc_id], references: [id])
-  doc_id String
   createdAt DateTime @default(now())
   appointment Appointment[]
+
 }
 
 
@@ -44,8 +43,8 @@ model Appointment{
   doc_id String
   patient User @relation(fields: [pid], references: [id])
   pid String
-  tplan TreatmentPlan @relation(fields: [t_id], references: [id])
-  t_id String
+  tplan TreatmentPlan @relation(fields: [plan_id], references: [id])
+  plan_id String
   date DateTime
   status String
 }

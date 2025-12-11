@@ -4,7 +4,7 @@ import Image from "next/image"
 export default function footer() {
   return (
     <div>
-    <div className="mt-20 bg-(--gray) p-20 flex flex-row justify-between">
+    <div className="mt-20 bg-(--gray) py-20 px-15 flex flex-row justify-between">
       <div className="flex flex-row items-center w-160 gap-7">
         <Image src="/images/logo.png" alt="logo" height={100} width={140}></Image>
         <p className="text-(--darkblue)">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure aspernatur fugit dolores ipsum quam laborum dolore, est explicabo doloribus nemo. Rem tenetur expedita, ad beatae maxime eligendi. Fugiat, ratione voluptatem.</p>
@@ -26,7 +26,7 @@ export default function footer() {
         <div className="flex flex-col items-start">
           <span className="text-2xl text-(--purple) font-bold">Address</span>
           <div className="flex flex-row gap-5 my-4" >
-          <Image src="/images/location.png" alt="freepik location" height={30} width={30}></Image>
+          <Image src="/images/location.png" alt="freepik location" height={20} width={30}></Image>
           <p>CureBridge, Karachi, Pakistan</p>
           </div>
         </div>

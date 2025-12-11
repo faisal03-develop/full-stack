@@ -1,6 +1,6 @@
 import SuccessCards from "./common/successcards"
 
-export default function successstories() {
+export default function successStories() {
   return (
     <div  className="mt-30">
       <span className="text-(--purple) underline text-5xl flex flex-row justify-center gap-6 mb-20">Success Stories</span>

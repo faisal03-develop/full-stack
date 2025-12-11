@@ -2,8 +2,8 @@ import Background from "@/components/background";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
 import Doctor from "@/components/doctor";
-import TreatmentPlan from "@/components/treatmentplan";
-import SuccessStories from "@/components/successstories";
+import TreatmentPlan from "@/components/treatmentPlan";
+import SuccessStories from "@/components/successStories";
 import Footer from "@/components/footer";
 
 
